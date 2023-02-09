@@ -1,0 +1,42 @@
+{
+  "name": "etl-process",
+  "description": "ETL Process",
+  "main": "./src/main.ts",
+  "engines": {
+    "node": "16"
+  },
+  "private": true,
+  "scripts": {
+    "start": "ts-node-dev --respawn --rs -r dotenv/config -r tsconfig-paths/register --transpile-only ./src/main.ts",
+    "lint": "eslint . && tsc --noemit",
+    "lint:fix": "eslint . --fix && tsc --noemit",
+    "build": "tsc && tsc-alias",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch --coverage --runInBand",
+    "test:ci": "jest --silent --ci --runInBand"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.x",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^6.0.0",
+    "jest": "27.4.x",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "node-stream-zip": "^1.15.0",
+    "uuid": "^9.0.0"
+  }
+}
