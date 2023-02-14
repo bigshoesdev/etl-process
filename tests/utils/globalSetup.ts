@@ -9,6 +9,6 @@ beforeEach(() => removeFolders());
 afterEach(() => removeFolders());
 
 const removeFolders = () => {
-  // fs.rmSync(EXTRACT_FOLDER_PATH, { recursive: true, force: true });
-  // fs.rmSync(OUTPUT_FOLDER_PATH, { recursive: true, force: true });
+  fs.rmSync(EXTRACT_FOLDER_PATH, { recursive: true, force: true });
+  fs.rmSync(OUTPUT_FOLDER_PATH, { recursive: true, force: true });
 };
